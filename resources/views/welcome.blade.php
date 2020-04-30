@@ -14,7 +14,6 @@
             html,
             body {
                 background-color: #fff;
-                height: 100vh;
                 margin: 0;
             }
         </style>

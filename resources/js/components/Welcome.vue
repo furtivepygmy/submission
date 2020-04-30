@@ -16,9 +16,8 @@
                 trip. Read on to discover how to take better travel photos with
                 your iPhone!
             </p>
-            <div class="section__image-container">
-                <!-- <img src="../../images/Image.png" class="section__image" /> -->
-            </div>
+            <!-- <div class="section__image-container-mask"></div> -->
+            <div class="section__image-container"></div>
             <h2 class="section__subtitle">
                 1. Research Your Destination To Find The Best Photo
                 Opportunities
