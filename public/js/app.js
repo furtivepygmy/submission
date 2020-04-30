@@ -177,9 +177,48 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 Vue.component("Button", {
   props: ["title"],
   template: '<button class="sidebar__gradient-button" >{{ title }}</button>'
+});
+Vue.component("SubmitButton", {
+  props: ["title"],
+  template: '<button class="modal__card__container__gradient-button" type="submit" >{{ title }}</button>'
 });
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -198,7 +237,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-top: 25px;\n  margin-bottom: 37px;\n}\n@media only screen and (min-width : 768px) {\n.container {\n    flex-direction: row;\n    align-items: flex-start;\n    justify-content: center;\n    margin-top: 48px;\n    margin-bottom: 84px;\n}\n}\n@media only screen and (min-width : 768px) and (min-width : 1024px) {\n.container {\n    margin-top: 76px;\n    margin-bottom: 118px;\n}\n}\n.section {\n  max-width: 375px;\n}\n@media only screen and (min-width : 768px) {\n.section {\n    max-width: 400px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.section {\n    max-width: 560px;\n}\n}\n.sidebar {\n  background: #f5f5f5;\n  display: flex;\n  justify-content: center;\n  align-items: flex-start;\n  height: 426px;\n  min-width: 340px;\n  max-width: 340px;\n  margin-top: -10px;\n  padding-top: 34px;\n}\n@media only screen and (min-width : 768px) {\n.sidebar {\n    height: 640px;\n    min-width: 220px;\n    max-width: 220px;\n    margin-top: 0;\n    margin-left: 35px;\n    padding-top: 30px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.sidebar {\n    height: 640px;\n    min-width: 270px;\n    max-width: 270px;\n    margin-top: 78px;\n    margin-left: 70px;\n    padding-top: 50px;\n}\n}\n.sidebar__gradient-button {\n  border: 0;\n  font-family: \"Lato\";\n  font-weight: bold;\n  font-size: 20px;\n  line-height: 24px;\n  box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);\n  text-align: center;\n  color: white;\n  height: 50px;\n  width: 282px;\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n}\n.sidebar__gradient-button:hover {\n  opacity: 0.8;\n  cursor: pointer;\n}\n@media only screen and (min-width : 768px) {\n.sidebar__gradient-button {\n    font-size: 15px;\n    line-height: 18px;\n    height: 40px;\n    width: 180px;\n}\n}\n@media only screen and (min-width : 768px) and (min-width : 1024px) {\n.sidebar__gradient-button {\n    height: 40px;\n    width: 220px;\n}\n}\nh2 {\n  font-family: \"Lato\";\n  font-weight: bold;\n  color: #101010;\n  margin-top: 0;\n}\nh2.section__title {\n  margin-bottom: 27px;\n  padding: 0 17px;\n  font-size: 24px;\n  line-height: 29px;\n}\n@media only screen and (min-width : 768px) {\nh2.section__title {\n    margin-bottom: 16px;\n    padding: 0;\n    font-size: 26px;\n    line-height: 31px;\n}\n}\nh2.section__subtitle {\n  margin-bottom: 16px;\n  padding: 0 17px;\n  font-size: 18px;\n  line-height: 22px;\n}\n@media only screen and (min-width : 768px) {\nh2.section__subtitle {\n    margin-bottom: 20px;\n    padding: 0;\n}\n}\np {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 16px;\n  line-height: 24px;\n  color: #101010;\n  margin-top: 0;\n}\np.section__text {\n  margin-bottom: 43px;\n  padding: 0 17px;\n}\n@media only screen and (min-width : 768px) {\np.section__text {\n    margin-bottom: 20px;\n    padding: 0;\n}\n}\n.section__divider {\n  border: 0;\n  height: 2px;\n  margin: 0 17px;\n  margin-bottom: 22px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  background-image: url(" + escape(__webpack_require__(/*! ../../images/Divider.png */ "./resources/images/Divider.png")) + ");\n}\n@media only screen and (min-width : 768px) {\n.section__divider {\n    margin: 0;\n    margin-bottom: 28px;\n}\n}\n@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {\n.section__divider {\n    background-image: url(" + escape(__webpack_require__(/*! ../../images/Divider@2x.png */ "./resources/images/Divider@2x.png")) + ");\n}\n}\n@media only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3/1), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {\n.section__divider {\n    background-image: url(" + escape(__webpack_require__(/*! ../../images/Divider@3x.png */ "./resources/images/Divider@3x.png")) + ");\n}\n}\n.section__image-container {\n  margin-top: -18px;\n  margin-bottom: 31px;\n  max-width: 100%;\n  height: 222px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  background-image: url(" + escape(__webpack_require__(/*! ../../images/Image.png */ "./resources/images/Image.png")) + ");\n}\n@media only screen and (min-width : 768px) {\n.section__image-container {\n    margin-top: 28px;\n    margin-bottom: 44px;\n    height: 300px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.section__image-container {\n    margin-top: 28px;\n    margin-bottom: 44px;\n    height: 330px;\n}\n}\n@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {\n.section__image-container {\n    background-image: url(" + escape(__webpack_require__(/*! ../../images/Image@2x.png */ "./resources/images/Image@2x.png")) + ");\n}\n}\n@media only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3/1), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {\n.section__image-container {\n    background-image: url(" + escape(__webpack_require__(/*! ../../images/Image@3x.png */ "./resources/images/Image@3x.png")) + ");\n}\n}", ""]);
+exports.push([module.i, ".container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-top: 25px;\n  margin-bottom: 37px;\n}\n@media only screen and (min-width : 768px) {\n.container {\n    flex-direction: row;\n    align-items: flex-start;\n    justify-content: center;\n    margin-top: 48px;\n    margin-bottom: 84px;\n}\n}\n@media only screen and (min-width : 768px) and (min-width : 1024px) {\n.container {\n    margin-top: 76px;\n    margin-bottom: 118px;\n}\n}\n.section {\n  max-width: 375px;\n}\n@media only screen and (min-width : 768px) {\n.section {\n    max-width: 400px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.section {\n    max-width: 560px;\n}\n}\n.sidebar {\n  background: #f5f5f5;\n  display: flex;\n  justify-content: center;\n  align-items: flex-start;\n  height: 426px;\n  min-width: 340px;\n  max-width: 340px;\n  margin-top: -10px;\n  padding-top: 34px;\n}\n@media only screen and (min-width : 768px) {\n.sidebar {\n    height: 640px;\n    min-width: 220px;\n    max-width: 220px;\n    margin-top: 0;\n    margin-left: 35px;\n    padding-top: 30px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.sidebar {\n    height: 640px;\n    min-width: 270px;\n    max-width: 270px;\n    margin-top: 78px;\n    margin-left: 70px;\n    padding-top: 50px;\n}\n}\n.sidebar__gradient-button {\n  border: 0;\n  font-family: \"Lato\";\n  font-weight: bold;\n  font-size: 20px;\n  line-height: 24px;\n  text-align: center;\n  color: white;\n  height: 50px;\n  width: 282px;\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n  box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);\n}\n.sidebar__gradient-button:hover {\n  opacity: 0.8;\n  cursor: pointer;\n}\n@media only screen and (min-width : 768px) {\n.sidebar__gradient-button {\n    font-size: 15px;\n    line-height: 18px;\n    height: 40px;\n    width: 180px;\n}\n}\n@media only screen and (min-width : 768px) and (min-width : 1024px) {\n.sidebar__gradient-button {\n    height: 40px;\n    width: 220px;\n}\n}\nh2 {\n  font-family: \"Lato\";\n  font-weight: bold;\n  color: #101010;\n  margin-top: 0;\n}\nh2.section__title {\n  margin-bottom: 27px;\n  padding: 0 17px;\n  font-size: 24px;\n  line-height: 29px;\n}\n@media only screen and (min-width : 768px) {\nh2.section__title {\n    margin-bottom: 16px;\n    padding: 0;\n    font-size: 26px;\n    line-height: 31px;\n}\n}\nh2.section__subtitle {\n  margin-bottom: 16px;\n  padding: 0 17px;\n  font-size: 18px;\n  line-height: 22px;\n}\n@media only screen and (min-width : 768px) {\nh2.section__subtitle {\n    margin-bottom: 20px;\n    padding: 0;\n}\n}\nh3 {\n  font-family: \"Lato\";\n  font-weight: bold;\n  font-size: 23px;\n  line-height: 28px;\n  margin-top: 0;\n  color: #464646;\n}\nh3.modal__card__container__text {\n  text-align: center;\n  margin-bottom: 23px;\n}\nh3.modal__card__container__text span {\n  color: green;\n}\np {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 16px;\n  line-height: 24px;\n  color: #101010;\n  margin-top: 0;\n}\np.section__text {\n  margin-bottom: 43px;\n  padding: 0 17px;\n}\n@media only screen and (min-width : 768px) {\np.section__text {\n    margin-bottom: 20px;\n    padding: 0;\n}\n}\nsmall {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 14px;\n  line-height: 17px;\n  margin-top: 0;\n  color: #848484;\n}\nsmall.modal__card__container__progress-text {\n  display: flex;\n  justify-content: center;\n  margin-top: 18px;\n  margin-bottom: 12px;\n}\n.section__divider {\n  border: 0;\n  height: 2px;\n  margin: 0 17px;\n  margin-bottom: 22px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  background-image: url(" + escape(__webpack_require__(/*! ../../images/Divider.png */ "./resources/images/Divider.png")) + ");\n}\n@media only screen and (min-width : 768px) {\n.section__divider {\n    margin: 0;\n    margin-bottom: 28px;\n}\n}\n@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {\n.section__divider {\n    background-image: url(" + escape(__webpack_require__(/*! ../../images/Divider@2x.png */ "./resources/images/Divider@2x.png")) + ");\n}\n}\n@media only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3/1), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {\n.section__divider {\n    background-image: url(" + escape(__webpack_require__(/*! ../../images/Divider@3x.png */ "./resources/images/Divider@3x.png")) + ");\n}\n}\n.section__image-container {\n  margin-top: -18px;\n  margin-bottom: 31px;\n  max-width: 100%;\n  height: 222px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  background-image: url(" + escape(__webpack_require__(/*! ../../images/Image.png */ "./resources/images/Image.png")) + ");\n}\n@media only screen and (min-width : 768px) {\n.section__image-container {\n    margin-top: 28px;\n    margin-bottom: 44px;\n    height: 245px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.section__image-container {\n    margin-top: 28px;\n    margin-bottom: 44px;\n    height: 330px;\n}\n}\n@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {\n.section__image-container {\n    background-image: url(" + escape(__webpack_require__(/*! ../../images/Image@2x.png */ "./resources/images/Image@2x.png")) + ");\n}\n}\n@media only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3/1), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {\n.section__image-container {\n    background-image: url(" + escape(__webpack_require__(/*! ../../images/Image@3x.png */ "./resources/images/Image@3x.png")) + ");\n}\n}\n.overlay {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  background-color: #262626;\n  opacity: 0.8;\n  mix-blend-mode: normal;\n}\n.modal {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.modal__card {\n  z-index: 1000;\n  height: 310px;\n  width: 570px;\n  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);\n  background: white;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.modal__card__container {\n  width: 440px;\n}\n.modal__card__container__progress-bar {\n  width: 440px;\n  height: 3px;\n  margin-bottom: 22px;\n}\n.modal__card__container__progress-bar.modal__card__container__progress-bar--remaining {\n  background: #e5e5e5;\n}\n.modal__card__container__progress-bar.modal__card__container__progress-bar--filled {\n  width: 220px;\n  background: linear-gradient(90deg, #e5424f 0.83%, #ac519c 100%);\n}\n.modal__card__container__form-input {\n  height: 54px;\n  width: 408px;\n  box-shadow: inset 0px 1px 5px rgba(142, 142, 142, 0.5);\n  margin-bottom: 21px;\n  padding-left: 16px;\n  padding-right: 16px;\n  border: 0;\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #101010;\n}\n.modal__card__container__gradient-button {\n  font-family: \"Lato\";\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 22px;\n  text-align: center;\n  color: white;\n  height: 48px;\n  width: 100%;\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n  box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);\n  border: 0;\n}\n.modal__card__container__gradient-button:hover {\n  opacity: 0.8;\n  cursor: pointer;\n}\n.modal__close-button {\n  position: absolute;\n  height: 48px;\n  width: 48px;\n  font-family: \"Lato\";\n  font-weight: bold;\n  font-size: 38px;\n  line-height: 46px;\n  text-align: center;\n  align-self: flex-end;\n}\n.modal__close-button:hover {\n  cursor: pointer;\n}\n::-webkit-input-placeholder {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #828282;\n}\n::-moz-placeholder {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #828282;\n}\n:-ms-input-placeholder {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #828282;\n}\n::-ms-input-placeholder {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #828282;\n}\n::placeholder {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #828282;\n}", ""]);
 
 // exports
 
@@ -1341,15 +1380,55 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _vm._m(0),
+  return _c("div", [
+    _c("div", { staticClass: "container" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "sidebar" },
+        [_c("Button", { attrs: { title: "Send Me The Tips" } })],
+        1
+      )
+    ]),
     _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "sidebar" },
-      [_c("Button", { attrs: { title: "Send Me The Tips" } })],
-      1
-    )
+    _c("div", { staticClass: "modal" }, [
+      _c("div", { staticClass: "modal__card" }, [
+        _c(
+          "div",
+          { staticClass: "modal__card__container" },
+          [
+            _c(
+              "small",
+              { staticClass: "modal__card__container__progress-text" },
+              [_vm._v("Step 1 of 2")]
+            ),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _vm._m(2),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "modal__card__container__form-input",
+              attrs: {
+                type: "email",
+                name: "email",
+                id: "email",
+                placeholder: "Please enter your email here",
+                required: ""
+              }
+            }),
+            _vm._v(" "),
+            _c("SubmitButton", { attrs: { title: "Send Me The Tips »" } })
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "modal__close-button" }, [_vm._v("×")])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "overlay" })
   ])
 }
 var staticRenderFns = [
@@ -1360,7 +1439,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "section" }, [
       _c("h2", { staticClass: "section__title" }, [
         _vm._v(
-          "\n            10 Best Photo Apps For Incredible iPhone Photography (2020\n            Edition)\n        "
+          "\r\n                    10 Best Photo Apps For Incredible iPhone Photography (2020\r\n                    Edition)\r\n                "
         )
       ]),
       _vm._v(" "),
@@ -1368,7 +1447,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "section__text" }, [
         _vm._v(
-          "\n            How do you capture more interesting travel photos with your\n            iPhone? How do you avoid taking the same cliché vacation photos\n            that everyone else takes? I recently interviewed Steffen Geldner\n            - a talented iPhone photographer with a passion for travel. In\n            this article, Steffen reveals 7 tips for shooting beautiful\n            travel photos that will preserve the amazing memories of your\n            trip. Read on to discover how to take better travel photos with\n            your iPhone!\n        "
+          "\r\n                    How do you capture more interesting travel photos with your\r\n                    iPhone? How do you avoid taking the same cliché vacation\r\n                    photos that everyone else takes? I recently interviewed\r\n                    Steffen Geldner - a talented iPhone photographer with a\r\n                    passion for travel. In this article, Steffen reveals 7 tips\r\n                    for shooting beautiful travel photos that will preserve the\r\n                    amazing memories of your trip. Read on to discover how to\r\n                    take better travel photos with your iPhone!\r\n                "
         )
       ]),
       _vm._v(" "),
@@ -1376,87 +1455,120 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("h2", { staticClass: "section__subtitle" }, [
         _vm._v(
-          "\n            1. Research Your Destination To Find The Best Photo\n            Opportunities\n        "
+          "\r\n                    1. Research Your Destination To Find The Best Photo\r\n                    Opportunities\r\n                "
         )
       ]),
       _vm._v(" "),
       _c("p", { staticClass: "section__text" }, [
         _vm._v(
-          "\n            Before your trip, I recommend researching the destination to\n            find the most interesting photo opportunities.\n            "
+          "\r\n                    Before your trip, I recommend researching the destination to\r\n                    find the most interesting photo opportunities.\r\n                    "
         ),
         _c("br"),
         _vm._v(" "),
         _c("br"),
         _vm._v(
-          "\n            I always research the location I'm traveling to. I do this\n            extensively and obsessively!\n            "
+          "\r\n                    I always research the location I'm traveling to. I do this\r\n                    extensively and obsessively!\r\n                    "
         ),
         _c("br"),
         _vm._v(" "),
         _c("br"),
         _vm._v(
-          "\n            It's up to you how much research you do. But you should\n            definitely spend a bit of time looking up some great places to\n            take pictures.\n            "
+          "\r\n                    It's up to you how much research you do. But you should\r\n                    definitely spend a bit of time looking up some great places\r\n                    to take pictures.\r\n                    "
         ),
         _c("br"),
         _vm._v(" "),
         _c("br"),
         _vm._v(
-          "\n            So. what kind of research can you do?\n            "
+          "\r\n                    So. what kind of research can you do?\r\n                    "
         ),
         _c("br"),
         _vm._v(" "),
         _c("br"),
         _vm._v(
-          "\n            First, you could search for photos that other people have taken\n            at the locations you're planning to visit.\n            "
+          "\r\n                    First, you could search for photos that other people have\r\n                    taken at the locations you're planning to visit.\r\n                    "
         ),
         _c("br"),
         _vm._v(" "),
         _c("br"),
         _vm._v(
-          "\n            Search on Instagram or Google to get an idea of the kinds of\n            photos people take there.\n        "
+          "\r\n                    Search on Instagram or Google to get an idea of the kinds of\r\n                    photos people take there.\r\n                "
         )
       ]),
       _vm._v(" "),
       _c("h2", { staticClass: "section__subtitle" }, [
         _vm._v(
-          "\n            2. Capture Your Journey To Tell The Complete Story Of Your\n            Travels\n        "
+          "\r\n                    2. Capture Your Journey To Tell The Complete Story Of Your\r\n                    Travels\r\n                "
         )
       ]),
       _vm._v(" "),
       _c("p", { staticClass: "section__text" }, [
         _vm._v(
-          "\n            Travel photography isn't just about photographing the\n            destination.\n            "
+          "\r\n                    Travel photography isn't just about photographing the\r\n                    destination.\r\n                    "
         ),
         _c("br"),
         _vm._v(" "),
         _c("br"),
         _vm._v(
-          "\n            For a more complete photographic story, capture your journey to\n            and from the location you're visiting.\n            "
+          "\r\n                    For a more complete photographic story, capture your journey\r\n                    to and from the location you're visiting.\r\n                    "
         ),
         _c("br"),
         _vm._v(" "),
         _c("br"),
         _vm._v(
-          "\n            If you're traveling by plane. try to get a window seat where you\n            have a view of the wing or propeller.\n            "
+          "\r\n                    If you're traveling by plane. try to get a window seat where\r\n                    you have a view of the wing or propeller.\r\n                    "
         ),
         _c("br"),
         _vm._v(" "),
         _c("br"),
         _vm._v(
-          "\n            And of course, you could capture a beautiful aerial view of\n            clouds, mountains, or city lights as you're flying above.\n            "
+          "\r\n                    And of course, you could capture a beautiful aerial view of\r\n                    clouds, mountains, or city lights as you're flying above.\r\n                    "
         ),
         _c("br"),
         _vm._v(" "),
         _c("br"),
         _vm._v(
-          "\n            Your journey will often involve several different types of\n            transport. And they all offer great photo opportunities.\n            "
+          "\r\n                    Your journey will often involve several different types of\r\n                    transport. And they all offer great photo opportunities.\r\n                    "
         ),
         _c("br"),
         _vm._v(" "),
         _c("br"),
         _vm._v(
-          "\n            Whether you're traveling by car, taxi, bus, train, boat, or\n            plane, try to capture some interesting photos.\n        "
+          "\r\n                    Whether you're traveling by car, taxi, bus, train, boat, or\r\n                    plane, try to capture some interesting photos.\r\n                "
         )
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "modal__card__container__progress-bar modal__card__container__progress-bar--remaining"
+      },
+      [
+        _c("div", {
+          staticClass:
+            "modal__card__container__progress-bar modal__card__container__progress-bar--filled"
+        })
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h3", { staticClass: "modal__card__container__text" }, [
+      _vm._v(
+        "\r\n                        Enter Your Email To Get\r\n                        "
+      ),
+      _c("span", [_vm._v("FREE")]),
+      _c("br"),
+      _vm._v(
+        "\r\n                        iPhone Photography Email Tips:\r\n                    "
+      )
     ])
   }
 ]
