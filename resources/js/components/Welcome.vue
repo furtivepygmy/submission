@@ -5,7 +5,8 @@
                 10 Best Photo Apps For Incredible iPhone Photography (2020
                 Edition)
             </h2>
-            <hr class="gradient" />
+            <!-- <hr class="gradient" /> -->
+            <div class="section__divider" />
             <p class="section__text">
                 How do you capture more interesting travel photos with your
                 iPhone? How do you avoid taking the same cliché vacation photos
@@ -75,14 +76,14 @@
                 plane, try to capture some interesting photos.
             </p>
         </div>
-        <div class="sidebar"><action-button title="Send Me The Tips" /></div>
+        <div class="sidebar"><Button title="Send Me The Tips" /></div>
     </div>
 </template>
 
 <script>
-Vue.component("action-button", {
+Vue.component("Button", {
     props: ["title"],
-    template: '<button class="button button--gradient" >{{ title }}</button>'
+    template: '<button class="sidebar__gradient-button" >{{ title }}</button>'
 });
 
 export default {};

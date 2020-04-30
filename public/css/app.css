@@ -58,7 +58,7 @@
     height: 640px;
     min-width: 220px;
     max-width: 220px;
-    margin-top: 16px;
+    margin-top: 0;
     margin-left: 35px;
     padding-top: 30px;
   }
@@ -75,44 +75,36 @@
   }
 }
 
-.button {
+.sidebar__gradient-button {
   border: 0;
   font-family: "Lato";
-  font-size: 15px;
   font-weight: bold;
-  line-height: 18px;
+  font-size: 20px;
+  line-height: 24px;
   box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);
   text-align: center;
+  color: white;
   height: 50px;
   width: 282px;
-}
-
-.button:hover {
-  cursor: pointer;
-}
-
-.button:focus {
-  outline: 0;
-}
-
-.button.button--gradient {
-  color: white;
   background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);
 }
 
-.button.button--gradient:hover {
+.sidebar__gradient-button:hover {
   opacity: 0.8;
+  cursor: pointer;
 }
 
 @media only screen and (min-width : 768px) {
-  .button {
+  .sidebar__gradient-button {
+    font-size: 15px;
+    line-height: 18px;
     height: 40px;
     width: 180px;
   }
 }
 
-@media only screen and (min-width : 1024px) {
-  .button {
+@media only screen and (min-width : 768px) and (min-width : 1024px) {
+  .sidebar__gradient-button {
     height: 40px;
     width: 220px;
   }
@@ -176,18 +168,33 @@ p.section__text {
   }
 }
 
-hr {
+.section__divider {
   border: 0;
   height: 2px;
   margin: 0 17px;
   margin-bottom: 22px;
-  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(/images/Divider.png?fa4484b17dd663c8e50e14eb2ed787aa);
 }
 
 @media only screen and (min-width : 768px) {
-  hr {
+  .section__divider {
     margin: 0;
     margin-bottom: 28px;
+  }
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .section__divider {
+    background-image: url(/images/Divider@2x.png?3db63546489134f395c815496660d308);
+  }
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3/1), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {
+  .section__divider {
+    background-image: url(/images/Divider@3x.png?74cba11a22599c1059fda61f0618a890);
   }
 }
 
