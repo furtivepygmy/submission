@@ -136,9 +136,12 @@ hr {
 }
 
 .section__image-container {
-  width: 100%;
-  height: 330px;
   margin-bottom: 29px;
-  background: url("/public/images/Image@2x.png");
+  max-width: 100%;
+  height: 330px;
+  background-image: url(/images/Image.png?e5f6dd2bf7bf998c49f9ecd77e9f9b48);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 

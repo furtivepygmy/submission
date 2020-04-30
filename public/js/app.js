@@ -175,6 +175,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 Vue.component("action-button", {
   props: ["title"],
   template: '<button class="button button--gradient" >{{ title }}</button>'
@@ -190,12 +192,13 @@ Vue.component("action-button", {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__(/*! ../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".container {\n  display: flex;\n}\n@media only screen and (min-width : 768px) {\n.container {\n    justify-content: center;\n    margin-top: 48px;\n    margin-bottom: 96px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.container {\n    justify-content: center;\n    margin-top: 76px;\n    margin-bottom: 138px;\n}\n}\n@media only screen and (min-width : 768px) {\n.section {\n    max-width: 400px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.section {\n    max-width: 560px;\n}\n}\n.sidebar {\n  background: #f5f5f5;\n  display: flex;\n  justify-content: center;\n  align-items: flex-start;\n}\n@media only screen and (min-width : 768px) {\n.sidebar {\n    height: 640px;\n    min-width: 220px;\n    max-width: 220px;\n    margin-top: 16px;\n    margin-left: 35px;\n    padding-top: 30px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.sidebar {\n    background: #f5f5f5;\n    height: 640px;\n    min-width: 270px;\n    max-width: 270px;\n    margin-top: 94px;\n    margin-left: 70px;\n    padding-top: 50px;\n}\n}\n.button {\n  border: 0;\n  font-family: \"Lato\";\n  font-size: 15px;\n  font-weight: bold;\n  line-height: 18px;\n  box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);\n  text-align: center;\n}\n.button:hover {\n  cursor: pointer;\n}\n.button:focus {\n  outline: 0;\n}\n.button.button--gradient {\n  color: white;\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n}\n.button.button--gradient:hover {\n  opacity: 0.8;\n}\n@media only screen and (min-width : 768px) {\n.button {\n    height: 40px;\n    width: 180px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.button {\n    height: 40px;\n    width: 220px;\n}\n}\nh2 {\n  font-family: \"Lato\";\n  font-weight: bold;\n  color: #101010;\n  margin: 16px 0;\n}\nh2.section__title {\n  font-size: 26px;\n  line-height: 31px;\n}\nh2.section__subtitle {\n  font-size: 18px;\n  line-height: 22px;\n}\np.section__text {\n  font-family: \"Lato\";\n  font-weight: 300;\n  color: #101010;\n  margin: 28px 0;\n  line-height: 150%;\n}\nhr {\n  border: 0;\n  height: 2px;\n  margin: 0;\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n}\n.section__image-container {\n  width: 100%;\n  height: 330px;\n  margin-bottom: 29px;\n  background: url(\"/public/images/Image@2x.png\");\n}", ""]);
+exports.push([module.i, ".container {\n  display: flex;\n}\n@media only screen and (min-width : 768px) {\n.container {\n    justify-content: center;\n    margin-top: 48px;\n    margin-bottom: 96px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.container {\n    justify-content: center;\n    margin-top: 76px;\n    margin-bottom: 138px;\n}\n}\n@media only screen and (min-width : 768px) {\n.section {\n    max-width: 400px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.section {\n    max-width: 560px;\n}\n}\n.sidebar {\n  background: #f5f5f5;\n  display: flex;\n  justify-content: center;\n  align-items: flex-start;\n}\n@media only screen and (min-width : 768px) {\n.sidebar {\n    height: 640px;\n    min-width: 220px;\n    max-width: 220px;\n    margin-top: 16px;\n    margin-left: 35px;\n    padding-top: 30px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.sidebar {\n    background: #f5f5f5;\n    height: 640px;\n    min-width: 270px;\n    max-width: 270px;\n    margin-top: 94px;\n    margin-left: 70px;\n    padding-top: 50px;\n}\n}\n.button {\n  border: 0;\n  font-family: \"Lato\";\n  font-size: 15px;\n  font-weight: bold;\n  line-height: 18px;\n  box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);\n  text-align: center;\n}\n.button:hover {\n  cursor: pointer;\n}\n.button:focus {\n  outline: 0;\n}\n.button.button--gradient {\n  color: white;\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n}\n.button.button--gradient:hover {\n  opacity: 0.8;\n}\n@media only screen and (min-width : 768px) {\n.button {\n    height: 40px;\n    width: 180px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.button {\n    height: 40px;\n    width: 220px;\n}\n}\nh2 {\n  font-family: \"Lato\";\n  font-weight: bold;\n  color: #101010;\n  margin: 16px 0;\n}\nh2.section__title {\n  font-size: 26px;\n  line-height: 31px;\n}\nh2.section__subtitle {\n  font-size: 18px;\n  line-height: 22px;\n}\np.section__text {\n  font-family: \"Lato\";\n  font-weight: 300;\n  color: #101010;\n  margin: 28px 0;\n  line-height: 150%;\n}\nhr {\n  border: 0;\n  height: 2px;\n  margin: 0;\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n}\n.section__image-container {\n  margin-bottom: 29px;\n  max-width: 100%;\n  height: 330px;\n  background-image: url(" + escape(__webpack_require__(/*! ../../images/Image.png */ "./resources/images/Image.png")) + ");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n}", ""]);
 
 // exports
 
@@ -284,6 +287,33 @@ function toComment(sourceMap) {
 	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
 
 	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/lib/url/escape.js":
+/*!***************************************************!*\
+  !*** ./node_modules/css-loader/lib/url/escape.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function escape(url) {
+    if (typeof url !== 'string') {
+        return url
+    }
+    // If url is already wrapped in quotes, remove them
+    if (/^['"].*['"]$/.test(url)) {
+        url = url.slice(1, -1);
+    }
+    // Should url be wrapped?
+    // See https://drafts.csswg.org/css-values-3/#urls
+    if (/["'() \t\n]/.test(url)) {
+        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
+    }
+
+    return url
 }
 
 
@@ -13557,6 +13587,17 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+
+/***/ "./resources/images/Image.png":
+/*!************************************!*\
+  !*** ./resources/images/Image.png ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/Image.png?e5f6dd2bf7bf998c49f9ecd77e9f9b48";
 
 /***/ }),
 
