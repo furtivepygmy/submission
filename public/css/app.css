@@ -94,6 +94,10 @@
   cursor: pointer;
 }
 
+.sidebar__gradient-button:focus {
+  outline: none;
+}
+
 @media only screen and (min-width : 768px) {
   .sidebar__gradient-button {
     font-size: 15px;
@@ -150,19 +154,28 @@ h2.section__subtitle {
 h3 {
   font-family: "Lato";
   font-weight: bold;
-  font-size: 23px;
-  line-height: 28px;
+  font-size: 20px;
+  line-height: 26px;
   margin-top: 0;
   color: #464646;
 }
 
 h3.modal__card__container__text {
-  text-align: center;
+  text-align: left;
+  margin-left: 2px;
   margin-bottom: 23px;
 }
 
 h3.modal__card__container__text span {
   color: green;
+}
+
+@media only screen and (min-width : 768px) {
+  h3.modal__card__container__text {
+    text-align: center;
+    font-size: 23px;
+    line-height: 28px;
+  }
 }
 
 p {
@@ -198,8 +211,14 @@ small {
 small.modal__card__container__progress-text {
   display: flex;
   justify-content: center;
-  margin-top: 18px;
+  margin-top: 12px;
   margin-bottom: 12px;
+}
+
+@media only screen and (min-width : 768px) {
+  small.modal__card__container__progress-text {
+    margin-top: 18px;
+  }
 }
 
 .section__divider {
@@ -207,28 +226,13 @@ small.modal__card__container__progress-text {
   height: 2px;
   margin: 0 17px;
   margin-bottom: 22px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url(/images/Divider.png?fa4484b17dd663c8e50e14eb2ed787aa);
+  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);
 }
 
 @media only screen and (min-width : 768px) {
   .section__divider {
     margin: 0;
     margin-bottom: 28px;
-  }
-}
-
-@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
-  .section__divider {
-    background-image: url(/images/Divider@2x.png?3db63546489134f395c815496660d308);
-  }
-}
-
-@media only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3/1), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {
-  .section__divider {
-    background-image: url(/images/Divider@3x.png?74cba11a22599c1059fda61f0618a890);
   }
 }
 
@@ -290,13 +294,21 @@ small.modal__card__container__progress-text {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  text-align: center;
+  margin-top: 130px;
+}
+
+@media only screen and (min-width : 768px) {
+  .modal {
+    margin-top: 0;
+    align-items: center;
+  }
 }
 
 .modal__card {
   z-index: 1000;
-  height: 310px;
-  width: 570px;
+  height: 272px;
+  width: 355px;
   box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);
   background: white;
   display: flex;
@@ -304,38 +316,74 @@ small.modal__card__container__progress-text {
   align-items: center;
 }
 
+@media only screen and (min-width : 768px) {
+  .modal__card {
+    height: 310px;
+    width: 570px;
+  }
+}
+
 .modal__card__container {
-  width: 440px;
+  width: 320px;
+}
+
+@media only screen and (min-width : 768px) {
+  .modal__card__container {
+    width: 440px;
+  }
 }
 
 .modal__card__container__progress-bar {
-  width: 440px;
-  height: 3px;
+  width: 320px;
+  height: 2px;
   margin-bottom: 22px;
-}
-
-.modal__card__container__progress-bar.modal__card__container__progress-bar--remaining {
   background: #e5e5e5;
 }
 
+.modal__card__container__progress-bar.modal__card__container__progress-bar--remaining {
+  margin-bottom: 22px;
+}
+
+@media only screen and (min-width : 768px) {
+  .modal__card__container__progress-bar.modal__card__container__progress-bar--remaining {
+    width: 440px;
+  }
+}
+
 .modal__card__container__progress-bar.modal__card__container__progress-bar--filled {
-  width: 220px;
+  width: 160px;
   background: linear-gradient(90deg, #e5424f 0.83%, #ac519c 100%);
 }
 
+@media only screen and (min-width : 768px) {
+  .modal__card__container__progress-bar.modal__card__container__progress-bar--filled {
+    width: 220px;
+  }
+}
+
 .modal__card__container__form-input {
-  height: 54px;
-  width: 408px;
+  height: 49px;
+  width: 296px;
   box-shadow: inset 0px 1px 5px rgba(142, 142, 142, 0.5);
-  margin-bottom: 21px;
-  padding-left: 16px;
-  padding-right: 16px;
+  margin-bottom: 16px;
   border: 0;
+  padding-left: 12px;
+  padding-right: 12px;
   font-family: "Lato";
   font-weight: 300;
   font-size: 18px;
   line-height: 22px;
   color: #101010;
+}
+
+@media only screen and (min-width : 768px) {
+  .modal__card__container__form-input {
+    height: 54px;
+    width: 408px;
+    margin-bottom: 21px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .modal__card__container__gradient-button {
@@ -345,7 +393,7 @@ small.modal__card__container__progress-text {
   line-height: 22px;
   text-align: center;
   color: white;
-  height: 48px;
+  height: 45px;
   width: 100%;
   background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);
   box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);
@@ -357,20 +405,39 @@ small.modal__card__container__progress-text {
   cursor: pointer;
 }
 
+.modal__card__container__gradient-button:focus {
+  outline: none;
+}
+
+@media only screen and (min-width : 768px) {
+  .modal__card__container__gradient-button {
+    height: 48px;
+  }
+}
+
 .modal__close-button {
   position: absolute;
-  height: 48px;
-  width: 48px;
+  height: 42px;
+  width: 42px;
   font-family: "Lato";
   font-weight: bold;
-  font-size: 38px;
-  line-height: 46px;
+  font-size: 29px;
+  line-height: 35px;
   text-align: center;
   align-self: flex-end;
 }
 
 .modal__close-button:hover {
   cursor: pointer;
+}
+
+@media only screen and (min-width : 768px) {
+  .modal__close-button {
+    height: 48px;
+    width: 48px;
+    font-size: 38px;
+    line-height: 46px;
+  }
 }
 
 ::-webkit-input-placeholder {

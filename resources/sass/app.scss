@@ -87,6 +87,9 @@ $resolution-3x: "only screen and (min--moz-device-pixel-ratio: 3), only screen a
         opacity: 0.8;
         cursor: pointer;
     }
+    &:focus {
+        outline: none;
+    }
     @media #{$breakpoint-sm} {
         font-size: 15px;
         line-height: 18px;
@@ -137,16 +140,25 @@ h2 {
 h3 {
     font-family: $font-family;
     font-weight: bold;
-    font-size: 23px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 26px;
     margin-top: 0;
     color: #464646;
 
     &.modal__card__container__text {
-        text-align: center;
+        text-align: left;
+        margin-left: 2px;
         margin-bottom: 23px;
         span {
             color: green;
+        }
+
+        @media #{$breakpoint-sm} {
+            text-align: center;
+            font-size: 23px;
+            line-height: 28px;
+            @media #{$breakpoint-md} {
+            }
         }
     }
 }
@@ -182,8 +194,14 @@ small {
     &.modal__card__container__progress-text {
         display: flex;
         justify-content: center;
-        margin-top: 18px;
+        margin-top: 12px;
         margin-bottom: 12px;
+
+        @media #{$breakpoint-sm} {
+            margin-top: 18px;
+            @media #{$breakpoint-md} {
+            }
+        }
     }
 }
 
@@ -192,6 +210,7 @@ small {
     height: 2px;
     margin: 0 17px;
     margin-bottom: 22px;
+    background: $gradient;
 
     @media #{$breakpoint-sm} {
         margin: 0;
@@ -199,17 +218,16 @@ small {
         @media #{$breakpoint-md} {
         }
     }
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url("../../images/Divider.png");
-    @media #{$resolution-2x} {
-        background-image: url("../../images/Divider@2x.png");
-    }
-    @media #{$resolution-3x} {
-        background-image: url("../../images/Divider@3x.png");
-    }
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+    // background-image: url("../../images/Divider.png");
+    // @media #{$resolution-2x} {
+    //     background-image: url("../../images/Divider@2x.png");
+    // }
+    // @media #{$resolution-3x} {
+    //     background-image: url("../../images/Divider@3x.png");
+    // }
 }
 
 .section__image-container {
@@ -258,52 +276,90 @@ small {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-align: center;
+    margin-top: 130px;
+    @media #{$breakpoint-sm} {
+        margin-top: 0;
+        align-items: center;
+        @media #{$breakpoint-md} {
+        }
+    }
 }
 
 .modal__card {
     z-index: 1000;
-    height: 310px;
-    width: 570px;
+    height: 272px;
+    width: 355px;
     box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);
     background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media #{$breakpoint-sm} {
+        height: 310px;
+        width: 570px;
+        @media #{$breakpoint-md} {
+        }
+    }
 }
 
 .modal__card__container {
-    width: 440px;
+    width: 320px;
+    @media #{$breakpoint-sm} {
+        width: 440px;
+        @media #{$breakpoint-md} {
+        }
+    }
 }
 
 .modal__card__container__progress-bar {
-    width: 440px;
-    height: 3px;
+    width: 320px;
+    height: 2px;
     margin-bottom: 22px;
+    background: #e5e5e5;
 
     &.modal__card__container__progress-bar--remaining {
-        background: #e5e5e5;
+        margin-bottom: 22px;
+        @media #{$breakpoint-sm} {
+            width: 440px;
+            @media #{$breakpoint-md} {
+            }
+        }
     }
 
     &.modal__card__container__progress-bar--filled {
-        width: 220px;
+        width: 160px;
         background: $gradient-reverse;
+        @media #{$breakpoint-sm} {
+            width: 220px;
+            @media #{$breakpoint-md} {
+            }
+        }
     }
 }
 
 .modal__card__container__form-input {
-    height: 54px;
-    width: 408px;
+    height: 49px;
+    width: 296px;
     box-shadow: inset 0px 1px 5px rgba(142, 142, 142, 0.5);
-    margin-bottom: 21px;
-    padding-left: 16px;
-    padding-right: 16px;
+    margin-bottom: 16px;
     border: 0;
+    padding-left: 12px;
+    padding-right: 12px;
     font-family: $font-family;
     font-weight: 300;
     font-size: 18px;
     line-height: 22px;
     color: #101010;
+    @media #{$breakpoint-sm} {
+        height: 54px;
+        width: 408px;
+        margin-bottom: 21px;
+        padding-left: 15px;
+        padding-right: 15px;
+        @media #{$breakpoint-md} {
+        }
+    }
 }
 
 .modal__card__container__gradient-button {
@@ -313,7 +369,7 @@ small {
     line-height: 22px;
     text-align: center;
     color: white;
-    height: 48px;
+    height: 45px;
     width: 100%;
     background: $gradient;
     box-shadow: $button-shadow;
@@ -322,20 +378,36 @@ small {
         opacity: 0.8;
         cursor: pointer;
     }
+    &:focus {
+        outline: none;
+    }
+    @media #{$breakpoint-sm} {
+        height: 48px;
+        @media #{$breakpoint-md} {
+        }
+    }
 }
 
 .modal__close-button {
     position: absolute;
-    height: 48px;
-    width: 48px;
+    height: 42px;
+    width: 42px;
     font-family: $font-family;
     font-weight: bold;
-    font-size: 38px;
-    line-height: 46px;
+    font-size: 29px;
+    line-height: 35px;
     text-align: center;
     align-self: flex-end;
     &:hover {
         cursor: pointer;
+    }
+    @media #{$breakpoint-sm} {
+        height: 48px;
+        width: 48px;
+        font-size: 38px;
+        line-height: 46px;
+        @media #{$breakpoint-md} {
+        }
     }
 }
 
