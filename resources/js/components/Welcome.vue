@@ -1,15 +1,13 @@
-<template
-    >
-  <div>
-    <div class="container no-scroll">
+<template>
+  <div v-bind:class="{'no-scroll': modalVisible}">
+    <div class="container">
       <!-- Section -->
       <div class="section">
         <h2 class="section__title">
           10 Best Photo Apps For Incredible iPhone Photography (2020
           Edition)
         </h2>
-        <!-- <hr class="gradient" /> -->
-        <div class="section__divider" />
+        <hr class="section__divider" />
         <p class="section__text">
           How do you capture more interesting travel photos with your
           iPhone? How do you avoid taking the same cliché vacation
@@ -96,14 +94,16 @@
             <span>FREE</span>
             <br />iPhone Photography Email Tips:
           </h3>
-          <form>
+          <form v-on:submit.prevent="onSubmit()" novalidate>
             <input
               class="modal__card__container__form-input"
+              v-bind:class="{'modal__card__container__form-input--error': error}"
               type="email"
               name="email"
               id="email"
-              placeholder="Please enter your email here"
+              v-bind:placeholder="placeholderText"
               required
+              @change="(event) => onChange(event)"
             />
             <button class="modal__card__container__gradient-button" type="submit">Send Me The Tips »</button>
           </form>
@@ -123,12 +123,34 @@
 export default {
   data() {
     return {
-      modalVisible: false
+      modalVisible: false,
+      email: "",
+      placeholderText: "Please enter your email here",
+      error: false
     };
   },
   methods: {
     setModalVisible: function(val) {
+      window.scrollTo(0, 0);
       return (this.modalVisible = val);
+    },
+    onChange: function(event) {
+      return (this.email = event.target.value);
+    },
+    onSubmit: function() {
+      if (!this.email) {
+        this.error = true;
+        return alert("Please provide your email");
+      }
+
+      if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email)) {
+        this.error = true;
+        return alert("Invalid Email 🙁");
+      }
+
+      this.error = false;
+      this.modalVisible = false;
+      return alert("Awesome! 🎉🎉 Please check your email!");
     }
   }
 };

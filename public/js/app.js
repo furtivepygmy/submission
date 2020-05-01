@@ -219,12 +219,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      modalVisible: false
+      modalVisible: false,
+      email: "",
+      placeholderText: "Please enter your email here",
+      error: false
     };
   },
   methods: {
     setModalVisible: function setModalVisible(val) {
+      window.scrollTo(0, 0);
       return this.modalVisible = val;
+    },
+    onChange: function onChange(event) {
+      return this.email = event.target.value;
+    },
+    onSubmit: function onSubmit() {
+      if (!this.email) {
+        this.error = true;
+        return alert("Please provide your email");
+      }
+
+      if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email)) {
+        this.error = true;
+        return alert("Invalid Email 🙁");
+      }
+
+      this.error = false;
+      this.modalVisible = false;
+      return alert("Awesome! 🎉🎉 Please check your email!");
     }
   }
 });
@@ -244,7 +266,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-top: 25px;\n  margin-bottom: 37px;\n}\n@media only screen and (min-width : 768px) {\n.container {\n    flex-direction: row;\n    align-items: flex-start;\n    justify-content: center;\n    margin-top: 48px;\n    margin-bottom: 84px;\n}\n}\n@media only screen and (min-width : 768px) and (min-width : 1024px) {\n.container {\n    margin-top: 76px;\n    margin-bottom: 118px;\n}\n}\n.section {\n  max-width: 375px;\n}\n@media only screen and (min-width : 768px) {\n.section {\n    max-width: 400px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.section {\n    max-width: 560px;\n}\n}\n.sidebar {\n  background: #f5f5f5;\n  display: flex;\n  justify-content: center;\n  align-items: flex-start;\n  height: 426px;\n  min-width: 340px;\n  max-width: 340px;\n  margin-top: -10px;\n  padding-top: 34px;\n}\n@media only screen and (min-width : 768px) {\n.sidebar {\n    height: 640px;\n    min-width: 220px;\n    max-width: 220px;\n    margin-top: 0;\n    margin-left: 35px;\n    padding-top: 30px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.sidebar {\n    height: 640px;\n    min-width: 270px;\n    max-width: 270px;\n    margin-top: 78px;\n    margin-left: 70px;\n    padding-top: 50px;\n}\n}\n.sidebar__gradient-button {\n  border: 0;\n  font-family: \"Lato\";\n  font-weight: bold;\n  font-size: 20px;\n  line-height: 24px;\n  text-align: center;\n  color: white;\n  height: 50px;\n  width: 282px;\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n  box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);\n}\n.sidebar__gradient-button:hover {\n  opacity: 0.8;\n  cursor: pointer;\n}\n.sidebar__gradient-button:focus {\n  outline: none;\n}\n@media only screen and (min-width : 768px) {\n.sidebar__gradient-button {\n    font-size: 15px;\n    line-height: 18px;\n    height: 40px;\n    width: 180px;\n}\n}\n@media only screen and (min-width : 768px) and (min-width : 1024px) {\n.sidebar__gradient-button {\n    height: 40px;\n    width: 220px;\n}\n}\nh2 {\n  font-family: \"Lato\";\n  font-weight: bold;\n  color: #101010;\n  margin-top: 0;\n}\nh2.section__title {\n  margin-bottom: 27px;\n  padding: 0 17px;\n  font-size: 24px;\n  line-height: 29px;\n}\n@media only screen and (min-width : 768px) {\nh2.section__title {\n    margin-bottom: 16px;\n    padding: 0;\n    font-size: 26px;\n    line-height: 31px;\n}\n}\nh2.section__subtitle {\n  margin-bottom: 16px;\n  padding: 0 17px;\n  font-size: 18px;\n  line-height: 22px;\n}\n@media only screen and (min-width : 768px) {\nh2.section__subtitle {\n    margin-bottom: 20px;\n    padding: 0;\n}\n}\nh3 {\n  font-family: \"Lato\";\n  font-weight: bold;\n  font-size: 20px;\n  line-height: 26px;\n  margin-top: 0;\n  color: #464646;\n}\nh3.modal__card__container__text {\n  text-align: left;\n  margin-left: 2px;\n  margin-bottom: 23px;\n}\nh3.modal__card__container__text span {\n  color: green;\n}\n@media only screen and (min-width : 768px) {\nh3.modal__card__container__text {\n    text-align: center;\n    font-size: 23px;\n    line-height: 28px;\n}\n}\np {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 16px;\n  line-height: 24px;\n  color: #101010;\n  margin-top: 0;\n}\np.section__text {\n  margin-bottom: 43px;\n  padding: 0 17px;\n}\n@media only screen and (min-width : 768px) {\np.section__text {\n    margin-bottom: 20px;\n    padding: 0;\n}\n}\nsmall {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 14px;\n  line-height: 17px;\n  margin-top: 0;\n  color: #848484;\n}\nsmall.modal__card__container__progress-text {\n  display: flex;\n  justify-content: center;\n  margin-top: 12px;\n  margin-bottom: 12px;\n}\n@media only screen and (min-width : 768px) {\nsmall.modal__card__container__progress-text {\n    margin-top: 18px;\n}\n}\n.section__divider {\n  border: 0;\n  height: 2px;\n  margin: 0 17px;\n  margin-bottom: 22px;\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n}\n@media only screen and (min-width : 768px) {\n.section__divider {\n    margin: 0;\n    margin-bottom: 28px;\n}\n}\n.section__image-container {\n  margin-top: -18px;\n  margin-bottom: 31px;\n  max-width: 100%;\n  height: 222px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  background-image: url(" + escape(__webpack_require__(/*! ../../images/Image.png */ "./resources/images/Image.png")) + ");\n}\n@media only screen and (min-width : 768px) {\n.section__image-container {\n    margin-top: 28px;\n    margin-bottom: 44px;\n    height: 245px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.section__image-container {\n    margin-top: 28px;\n    margin-bottom: 44px;\n    height: 330px;\n}\n}\n@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {\n.section__image-container {\n    background-image: url(" + escape(__webpack_require__(/*! ../../images/Image@2x.png */ "./resources/images/Image@2x.png")) + ");\n}\n}\n@media only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3/1), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {\n.section__image-container {\n    background-image: url(" + escape(__webpack_require__(/*! ../../images/Image@3x.png */ "./resources/images/Image@3x.png")) + ");\n}\n}\n.overlay {\n  z-index: 999;\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  background-color: #262626;\n  opacity: 0.8;\n  mix-blend-mode: normal;\n}\n.modal {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  text-align: center;\n  margin-top: 130px;\n}\n@media only screen and (min-width : 768px) {\n.modal {\n    margin-top: 0;\n    align-items: center;\n}\n}\n.modal__card {\n  z-index: 1000;\n  height: 272px;\n  width: 355px;\n  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);\n  background: white;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n@media only screen and (min-width : 768px) {\n.modal__card {\n    height: 310px;\n    width: 570px;\n}\n}\n.modal__card__container {\n  width: 320px;\n}\n@media only screen and (min-width : 768px) {\n.modal__card__container {\n    width: 440px;\n}\n}\n.modal__card__container__progress-bar {\n  width: 320px;\n  height: 2px;\n  margin-bottom: 22px;\n  background: #e5e5e5;\n}\n.modal__card__container__progress-bar.modal__card__container__progress-bar--remaining {\n  margin-bottom: 22px;\n}\n@media only screen and (min-width : 768px) {\n.modal__card__container__progress-bar.modal__card__container__progress-bar--remaining {\n    width: 440px;\n}\n}\n.modal__card__container__progress-bar.modal__card__container__progress-bar--filled {\n  width: 160px;\n  background: linear-gradient(90deg, #e5424f 0.83%, #ac519c 100%);\n}\n@media only screen and (min-width : 768px) {\n.modal__card__container__progress-bar.modal__card__container__progress-bar--filled {\n    width: 220px;\n}\n}\n.modal__card__container__form-input {\n  height: 49px;\n  width: 296px;\n  box-shadow: inset 0px 1px 5px rgba(142, 142, 142, 0.5);\n  margin-bottom: 16px;\n  border: 0;\n  padding-left: 12px;\n  padding-right: 12px;\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #101010;\n}\n@media only screen and (min-width : 768px) {\n.modal__card__container__form-input {\n    height: 54px;\n    width: 408px;\n    margin-bottom: 21px;\n    padding-left: 15px;\n    padding-right: 15px;\n}\n}\n.modal__card__container__gradient-button {\n  font-family: \"Lato\";\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 22px;\n  text-align: center;\n  color: white;\n  height: 45px;\n  width: 100%;\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n  box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);\n  border: 0;\n}\n.modal__card__container__gradient-button:hover {\n  opacity: 0.8;\n  cursor: pointer;\n}\n.modal__card__container__gradient-button:focus {\n  outline: none;\n}\n@media only screen and (min-width : 768px) {\n.modal__card__container__gradient-button {\n    height: 48px;\n}\n}\n.modal__close-button {\n  position: absolute;\n  height: 42px;\n  width: 42px;\n  font-family: \"Lato\";\n  font-weight: bold;\n  font-size: 29px;\n  line-height: 35px;\n  text-align: center;\n  align-self: flex-end;\n}\n.modal__close-button:hover {\n  cursor: pointer;\n}\n@media only screen and (min-width : 768px) {\n.modal__close-button {\n    height: 48px;\n    width: 48px;\n    font-size: 38px;\n    line-height: 46px;\n}\n}\n::-webkit-input-placeholder {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #828282;\n}\n::-moz-placeholder {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #828282;\n}\n:-ms-input-placeholder {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #828282;\n}\n::-ms-input-placeholder {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #828282;\n}\n::placeholder {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #828282;\n}", ""]);
+exports.push([module.i, ".no-scroll {\n  height: 100vh;\n  overflow: hidden;\n}\n.container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-top: 25px;\n  margin-bottom: 37px;\n}\n@media only screen and (min-width : 768px) {\n.container {\n    flex-direction: row;\n    align-items: flex-start;\n    justify-content: center;\n    margin-top: 48px;\n    margin-bottom: 84px;\n}\n}\n@media only screen and (min-width : 768px) and (min-width : 1024px) {\n.container {\n    margin-top: 76px;\n    margin-bottom: 118px;\n}\n}\n.section {\n  max-width: 375px;\n}\n@media only screen and (min-width : 768px) {\n.section {\n    max-width: 400px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.section {\n    max-width: 560px;\n}\n}\n.sidebar {\n  background: #f5f5f5;\n  display: flex;\n  justify-content: center;\n  align-items: flex-start;\n  height: 426px;\n  min-width: 340px;\n  max-width: 340px;\n  margin-top: -10px;\n  padding-top: 34px;\n}\n@media only screen and (min-width : 768px) {\n.sidebar {\n    height: 640px;\n    min-width: 220px;\n    max-width: 220px;\n    margin-top: 0;\n    margin-left: 35px;\n    padding-top: 30px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.sidebar {\n    height: 640px;\n    min-width: 270px;\n    max-width: 270px;\n    margin-top: 78px;\n    margin-left: 70px;\n    padding-top: 50px;\n}\n}\n.sidebar__gradient-button {\n  border: 0;\n  font-family: \"Lato\";\n  font-weight: bold;\n  font-size: 20px;\n  line-height: 24px;\n  text-align: center;\n  color: white;\n  height: 50px;\n  width: 282px;\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n  box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);\n}\n.sidebar__gradient-button:hover {\n  opacity: 0.8;\n  cursor: pointer;\n}\n.sidebar__gradient-button:focus {\n  outline: none;\n}\n@media only screen and (min-width : 768px) {\n.sidebar__gradient-button {\n    font-size: 15px;\n    line-height: 18px;\n    height: 40px;\n    width: 180px;\n}\n}\n@media only screen and (min-width : 768px) and (min-width : 1024px) {\n.sidebar__gradient-button {\n    height: 40px;\n    width: 220px;\n}\n}\nh2 {\n  font-family: \"Lato\";\n  font-weight: bold;\n  color: #101010;\n  margin-top: 0;\n}\nh2.section__title {\n  margin-bottom: 27px;\n  padding: 0 17px;\n  font-size: 24px;\n  line-height: 29px;\n}\n@media only screen and (min-width : 768px) {\nh2.section__title {\n    margin-bottom: 16px;\n    padding: 0;\n    font-size: 26px;\n    line-height: 31px;\n}\n}\nh2.section__subtitle {\n  margin-bottom: 16px;\n  padding: 0 17px;\n  font-size: 18px;\n  line-height: 22px;\n}\n@media only screen and (min-width : 768px) {\nh2.section__subtitle {\n    margin-bottom: 20px;\n    padding: 0;\n}\n}\nh3 {\n  font-family: \"Lato\";\n  font-weight: bold;\n  font-size: 20px;\n  line-height: 26px;\n  margin-top: 0;\n  color: #464646;\n}\nh3.modal__card__container__text {\n  text-align: left;\n  margin-left: 2px;\n  margin-bottom: 23px;\n}\nh3.modal__card__container__text span {\n  color: green;\n}\n@media only screen and (min-width : 768px) {\nh3.modal__card__container__text {\n    text-align: center;\n    font-size: 23px;\n    line-height: 28px;\n}\n}\np {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 16px;\n  line-height: 24px;\n  color: #101010;\n  margin-top: 0;\n}\np.section__text {\n  margin-bottom: 43px;\n  padding: 0 17px;\n}\n@media only screen and (min-width : 768px) {\np.section__text {\n    margin-bottom: 20px;\n    padding: 0;\n}\n}\nsmall {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 14px;\n  line-height: 17px;\n  margin-top: 0;\n  color: #848484;\n}\nsmall.modal__card__container__progress-text {\n  display: flex;\n  justify-content: center;\n  margin-top: 12px;\n  margin-bottom: 12px;\n}\n@media only screen and (min-width : 768px) {\nsmall.modal__card__container__progress-text {\n    margin-top: 18px;\n}\n}\nhr.section__divider {\n  border: 0;\n  height: 2px;\n  margin: 0 17px;\n  margin-bottom: 22px;\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n}\n@media only screen and (min-width : 768px) {\nhr.section__divider {\n    margin: 0;\n    margin-bottom: 28px;\n}\n}\n.section__image-container {\n  margin-top: -18px;\n  margin-bottom: 31px;\n  max-width: 100%;\n  height: 222px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  background-image: url(" + escape(__webpack_require__(/*! ../../images/Image.png */ "./resources/images/Image.png")) + ");\n}\n@media only screen and (min-width : 768px) {\n.section__image-container {\n    margin-top: 28px;\n    margin-bottom: 44px;\n    height: 245px;\n}\n}\n@media only screen and (min-width : 1024px) {\n.section__image-container {\n    margin-top: 28px;\n    margin-bottom: 44px;\n    height: 330px;\n}\n}\n@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {\n.section__image-container {\n    background-image: url(" + escape(__webpack_require__(/*! ../../images/Image@2x.png */ "./resources/images/Image@2x.png")) + ");\n}\n}\n@media only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3/1), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {\n.section__image-container {\n    background-image: url(" + escape(__webpack_require__(/*! ../../images/Image@3x.png */ "./resources/images/Image@3x.png")) + ");\n}\n}\n.overlay {\n  z-index: 999;\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  background-color: #262626;\n  opacity: 0.8;\n  mix-blend-mode: normal;\n}\n.modal {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  text-align: center;\n  margin-top: 130px;\n}\n@media only screen and (min-width : 768px) {\n.modal {\n    margin-top: 0;\n    align-items: center;\n}\n}\n.modal__card {\n  z-index: 1000;\n  height: 272px;\n  width: 355px;\n  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);\n  background: white;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n@media only screen and (min-width : 768px) {\n.modal__card {\n    height: 310px;\n    width: 570px;\n}\n}\n.modal__card__container {\n  width: 320px;\n}\n@media only screen and (min-width : 768px) {\n.modal__card__container {\n    width: 440px;\n}\n}\n.modal__card__container__progress-bar {\n  width: 320px;\n  height: 2px;\n  margin-bottom: 22px;\n  background: #e5e5e5;\n}\n.modal__card__container__progress-bar.modal__card__container__progress-bar--remaining {\n  margin-bottom: 22px;\n}\n@media only screen and (min-width : 768px) {\n.modal__card__container__progress-bar.modal__card__container__progress-bar--remaining {\n    width: 440px;\n}\n}\n.modal__card__container__progress-bar.modal__card__container__progress-bar--filled {\n  width: 160px;\n  background: linear-gradient(90deg, #e5424f 0.83%, #ac519c 100%);\n}\n@media only screen and (min-width : 768px) {\n.modal__card__container__progress-bar.modal__card__container__progress-bar--filled {\n    width: 220px;\n}\n}\n.modal__card__container__form-input {\n  height: 49px;\n  width: 296px;\n  box-shadow: inset 0px 1px 5px rgba(142, 142, 142, 0.5);\n  margin-bottom: 16px;\n  border: 0;\n  padding-left: 12px;\n  padding-right: 12px;\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #101010;\n}\n.modal__card__container__form-input:focus {\n  outline: none;\n  background: white;\n}\n.modal__card__container__form-input.modal__card__container__form-input--error {\n  border: solid 1px tomato;\n}\n@media only screen and (min-width : 768px) {\n.modal__card__container__form-input {\n    height: 54px;\n    width: 408px;\n    margin-bottom: 21px;\n    padding-left: 15px;\n    padding-right: 15px;\n}\n}\n.modal__card__container__gradient-button {\n  font-family: \"Lato\";\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 22px;\n  text-align: center;\n  color: white;\n  height: 45px;\n  width: 100%;\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n  box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);\n  border: 0;\n}\n.modal__card__container__gradient-button:hover {\n  opacity: 0.8;\n  cursor: pointer;\n}\n.modal__card__container__gradient-button:focus {\n  outline: none;\n}\n@media only screen and (min-width : 768px) {\n.modal__card__container__gradient-button {\n    height: 48px;\n}\n}\n.modal__close-button {\n  position: absolute;\n  height: 42px;\n  width: 42px;\n  font-family: \"Lato\";\n  font-weight: bold;\n  font-size: 29px;\n  line-height: 35px;\n  text-align: center;\n  align-self: flex-end;\n}\n.modal__close-button:hover {\n  cursor: pointer;\n}\n@media only screen and (min-width : 768px) {\n.modal__close-button {\n    height: 48px;\n    width: 48px;\n    font-size: 38px;\n    line-height: 46px;\n}\n}\n:-ms-input-placeholder {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #828282;\n}\n::-ms-input-placeholder {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #828282;\n}\n::-ms-input-placeholder,\n::-webkit-input-placeholder,\n::placeholder {\n  font-family: \"Lato\";\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #828282;\n}", ""]);
 
 // exports
 
@@ -1387,8 +1409,8 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "container no-scroll" }, [
+  return _c("div", { class: { "no-scroll": _vm.modalVisible } }, [
+    _c("div", { staticClass: "container" }, [
       _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "sidebar" }, [
@@ -1410,7 +1432,59 @@ var render = function() {
     _vm.modalVisible
       ? _c("div", { staticClass: "modal" }, [
           _c("div", { staticClass: "modal__card" }, [
-            _vm._m(1),
+            _c("div", { staticClass: "modal__card__container" }, [
+              _c(
+                "small",
+                { staticClass: "modal__card__container__progress-text" },
+                [_vm._v("Step 1 of 2")]
+              ),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _c(
+                "form",
+                {
+                  attrs: { novalidate: "" },
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.onSubmit()
+                    }
+                  }
+                },
+                [
+                  _c("input", {
+                    staticClass: "modal__card__container__form-input",
+                    class: {
+                      "modal__card__container__form-input--error": _vm.error
+                    },
+                    attrs: {
+                      type: "email",
+                      name: "email",
+                      id: "email",
+                      placeholder: _vm.placeholderText,
+                      required: ""
+                    },
+                    on: {
+                      change: function(event) {
+                        return _vm.onChange(event)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "modal__card__container__gradient-button",
+                      attrs: { type: "submit" }
+                    },
+                    [_vm._v("Send Me The Tips »")]
+                  )
+                ]
+              )
+            ]),
             _vm._v(" "),
             _c(
               "div",
@@ -1443,7 +1517,7 @@ var staticRenderFns = [
         )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "section__divider" }),
+      _c("hr", { staticClass: "section__divider" }),
       _vm._v(" "),
       _c("p", { staticClass: "section__text" }, [
         _vm._v(
@@ -1540,54 +1614,30 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal__card__container" }, [
-      _c("small", { staticClass: "modal__card__container__progress-text" }, [
-        _vm._v("Step 1 of 2")
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
+    return _c(
+      "div",
+      {
+        staticClass:
+          "modal__card__container__progress-bar modal__card__container__progress-bar--remaining"
+      },
+      [
+        _c("div", {
           staticClass:
-            "modal__card__container__progress-bar modal__card__container__progress-bar--remaining"
-        },
-        [
-          _c("div", {
-            staticClass:
-              "modal__card__container__progress-bar modal__card__container__progress-bar--filled"
-          })
-        ]
-      ),
+            "modal__card__container__progress-bar modal__card__container__progress-bar--filled"
+        })
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h3", { staticClass: "modal__card__container__text" }, [
+      _vm._v("\n          Enter Your Email To Get\n          "),
+      _c("span", [_vm._v("FREE")]),
       _vm._v(" "),
-      _c("h3", { staticClass: "modal__card__container__text" }, [
-        _vm._v("\n          Enter Your Email To Get\n          "),
-        _c("span", [_vm._v("FREE")]),
-        _vm._v(" "),
-        _c("br"),
-        _vm._v("iPhone Photography Email Tips:\n        ")
-      ]),
-      _vm._v(" "),
-      _c("form", [
-        _c("input", {
-          staticClass: "modal__card__container__form-input",
-          attrs: {
-            type: "email",
-            name: "email",
-            id: "email",
-            placeholder: "Please enter your email here",
-            required: ""
-          }
-        }),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "modal__card__container__gradient-button",
-            attrs: { type: "submit" }
-          },
-          [_vm._v("Send Me The Tips »")]
-        )
-      ])
+      _c("br"),
+      _vm._v("iPhone Photography Email Tips:\n        ")
     ])
   }
 ]

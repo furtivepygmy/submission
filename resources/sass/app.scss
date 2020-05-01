@@ -14,6 +14,11 @@ $resolution-2x: "only screen and (min--moz-device-pixel-ratio: 2), only screen a
 
 $resolution-3x: "only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3/1), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3)";
 
+.no-scroll {
+    height: 100vh;
+    overflow: hidden;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -205,29 +210,31 @@ small {
     }
 }
 
-.section__divider {
-    border: 0;
-    height: 2px;
-    margin: 0 17px;
-    margin-bottom: 22px;
-    background: $gradient;
+hr {
+    &.section__divider {
+        border: 0;
+        height: 2px;
+        margin: 0 17px;
+        margin-bottom: 22px;
+        background: $gradient;
 
-    @media #{$breakpoint-sm} {
-        margin: 0;
-        margin-bottom: 28px;
-        @media #{$breakpoint-md} {
+        @media #{$breakpoint-sm} {
+            margin: 0;
+            margin-bottom: 28px;
+            @media #{$breakpoint-md} {
+            }
         }
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-position: center;
+        // background-image: url("../../images/Divider.png");
+        // @media #{$resolution-2x} {
+        //     background-image: url("../../images/Divider@2x.png");
+        // }
+        // @media #{$resolution-3x} {
+        //     background-image: url("../../images/Divider@3x.png");
+        // }
     }
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center;
-    // background-image: url("../../images/Divider.png");
-    // @media #{$resolution-2x} {
-    //     background-image: url("../../images/Divider@2x.png");
-    // }
-    // @media #{$resolution-3x} {
-    //     background-image: url("../../images/Divider@3x.png");
-    // }
 }
 
 .section__image-container {
@@ -352,6 +359,13 @@ small {
     font-size: 18px;
     line-height: 22px;
     color: #101010;
+    &:focus {
+        outline: none;
+        background: white;
+    }
+    &.modal__card__container__form-input--error {
+        border: solid 1px tomato;
+    }
     @media #{$breakpoint-sm} {
         height: 54px;
         width: 408px;
@@ -412,8 +426,8 @@ small {
     }
 }
 
-// :-ms-input-placeholder,
-// ::-webkit-input-placeholder,
+::-ms-input-placeholder,
+::-webkit-input-placeholder,
 ::placeholder {
     font-family: $font-family;
     font-weight: 300;

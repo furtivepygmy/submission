@@ -1,6 +1,11 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;
 
-0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);.container {
+0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);.no-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -221,7 +226,7 @@ small.modal__card__container__progress-text {
   }
 }
 
-.section__divider {
+hr.section__divider {
   border: 0;
   height: 2px;
   margin: 0 17px;
@@ -230,7 +235,7 @@ small.modal__card__container__progress-text {
 }
 
 @media only screen and (min-width : 768px) {
-  .section__divider {
+  hr.section__divider {
     margin: 0;
     margin-bottom: 28px;
   }
@@ -377,6 +382,15 @@ small.modal__card__container__progress-text {
   color: #101010;
 }
 
+.modal__card__container__form-input:focus {
+  outline: none;
+  background: white;
+}
+
+.modal__card__container__form-input.modal__card__container__form-input--error {
+  border: solid 1px tomato;
+}
+
 @media only screen and (min-width : 768px) {
   .modal__card__container__form-input {
     height: 54px;
@@ -441,22 +455,6 @@ small.modal__card__container__progress-text {
   }
 }
 
-::-webkit-input-placeholder {
-  font-family: "Lato";
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 22px;
-  color: #828282;
-}
-
-::-moz-placeholder {
-  font-family: "Lato";
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 22px;
-  color: #828282;
-}
-
 :-ms-input-placeholder {
   font-family: "Lato";
   font-weight: 300;
@@ -473,6 +471,8 @@ small.modal__card__container__progress-text {
   color: #828282;
 }
 
+::-ms-input-placeholder,
+::-webkit-input-placeholder,
 ::placeholder {
   font-family: "Lato";
   font-weight: 300;
