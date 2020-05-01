@@ -366,9 +366,9 @@ hr {
 .modal__card__container__form-input {
     height: 49px;
     width: 296px;
-    box-shadow: inset 0px 1px 5px rgba(142, 142, 142, 0.5);
     margin-bottom: 16px;
     border: 0;
+    box-shadow: $input-shadow;
     padding-left: 12px;
     padding-right: 12px;
     font-family: $font-family;
@@ -412,6 +412,12 @@ hr {
     }
     &:focus {
         outline: none;
+    }
+    &.modal__card__container__gradient-button--disabled {
+        background: $gradient-alt;
+        &:hover {
+            cursor: default;
+        }
     }
     @media #{$breakpoint-sm} {
         height: 48px;

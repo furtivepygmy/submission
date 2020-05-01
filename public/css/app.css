@@ -409,9 +409,9 @@ hr.section__divider {
 .modal__card__container__form-input {
   height: 49px;
   width: 296px;
-  box-shadow: inset 0px 1px 5px rgba(142, 142, 142, 0.5);
   margin-bottom: 16px;
   border: 0;
+  box-shadow: inset 0px 1px 5px rgba(142, 142, 142, 0.5);
   padding-left: 12px;
   padding-right: 12px;
   font-family: "Lato";
@@ -427,7 +427,7 @@ hr.section__divider {
 }
 
 .modal__card__container__form-input.modal__card__container__form-input--error {
-  border: solid 1px tomato;
+  border: solid 1px #e51323;
 }
 
 @media only screen and (min-width : 768px) {
@@ -461,6 +461,14 @@ hr.section__divider {
 
 .modal__card__container__gradient-button:focus {
   outline: none;
+}
+
+.modal__card__container__gradient-button.modal__card__container__gradient-button--disabled {
+  background: linear-gradient(90deg, #b678aa 1.29%, #e28990 100%);
+}
+
+.modal__card__container__gradient-button.modal__card__container__gradient-button--disabled:hover {
+  cursor: default;
 }
 
 @media only screen and (min-width : 768px) {
