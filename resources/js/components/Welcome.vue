@@ -1,7 +1,7 @@
 <template
     >
   <div>
-    <div class="container">
+    <div class="container no-scroll">
       <!-- Section -->
       <div class="section">
         <h2 class="section__title">

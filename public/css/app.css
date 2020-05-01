@@ -276,6 +276,7 @@ small.modal__card__container__progress-text {
 }
 
 .overlay {
+  z-index: 999;
   position: absolute;
   top: 0;
   left: 0;
