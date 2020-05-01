@@ -431,7 +431,10 @@ hr {
 }
 
 .modal__close-button {
-    position: absolute;
+    // Needed to set this position to relative and add a negative bottom margin because Internet Explorer was not playing well with absolute positioning
+    position: relative;
+    margin-bottom: -42px;
+    z-index: 1000;
     height: 42px;
     width: 42px;
     font-family: $font-family;
@@ -444,6 +447,7 @@ hr {
         cursor: pointer;
     }
     @media #{$breakpoint-sm} {
+        margin-bottom: -48px;
         height: 48px;
         width: 48px;
         font-size: 38px;

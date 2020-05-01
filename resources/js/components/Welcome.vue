@@ -80,6 +80,7 @@
     <!-- Modal -->
     <div v-if="modalVisible" class="modal">
       <div class="modal__card">
+        <div class="modal__close-button" @click="setModalVisible(false)">×</div>
         <div class="modal__card__container">
           <small class="modal__card__container__progress-text">Step 1 of 2</small>
           <div
@@ -109,7 +110,6 @@
             <button class="modal__card__container__gradient-button" type="submit">Send Me The Tips »</button>
           </form>
         </div>
-        <div class="modal__close-button" @click="setModalVisible(false)">×</div>
       </div>
     </div>
     <!-- Modal -->

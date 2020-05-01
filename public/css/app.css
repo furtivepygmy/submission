@@ -470,7 +470,9 @@ hr.section__divider {
 }
 
 .modal__close-button {
-  position: absolute;
+  position: relative;
+  margin-bottom: -42px;
+  z-index: 1000;
   height: 42px;
   width: 42px;
   font-family: "Lato";
@@ -487,6 +489,7 @@ hr.section__divider {
 
 @media only screen and (min-width : 768px) {
   .modal__close-button {
+    margin-bottom: -48px;
     height: 48px;
     width: 48px;
     font-size: 38px;
