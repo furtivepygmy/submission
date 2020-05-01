@@ -145,10 +145,11 @@ export default {
 
       if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email)) {
         this.error = true;
-        return alert("Invalid Email 🙁");
+        return alert("Please provide a valid email");
       }
 
       this.error = false;
+      this.email = "";
       this.modalVisible = false;
       return alert("Awesome! 🎉🎉 Please check your email!");
     }
