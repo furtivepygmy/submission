@@ -381,7 +381,7 @@ hr {
         background: white;
     }
     &.modal__card__container__form-input--error {
-        border: solid 1px tomato;
+        border: solid 1px #e51323;
     }
     @media #{$breakpoint-sm} {
         height: 54px;
